@@ -63,14 +63,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 40,
   },
   inputs: {
-    marginTop: 100,
-    marginBottom: 60,
+    marginTop: 50,
+    marginBottom: 20,
   },
   separatorContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginTop: 70,
+    marginTop: 40,
   },
   smallSeparator: {
     height: 1,
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-evenly",
     marginTop: 30,
-    marginBottom: 119,
+    marginBottom: 60,
   },
   bottomText: {
     color: "#97ADB6",
