@@ -2,11 +2,14 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import SignUp from './src/screens/auth/SignUp'
-import SignIn from './src/screens/auth/SignIn';
+import { NavigationContainer } from "@react-navigation/native";
+import {AuthNavigator} from './src/navigations/auth'
+
 export default function App() {
   return (
-    <SignIn />
+      <NavigationContainer>
+        <AuthNavigator />
+      </NavigationContainer>
   );
 }
 
