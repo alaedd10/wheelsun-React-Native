@@ -9,7 +9,7 @@ import {
   KeyboardAvoidingView,
 } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
-import { Colors, Values } from "../../constants";
+import { Colors, Values, Strings } from "../../constants";
 import Input from "../../components/Input";
 import Header from "../../components/Header";
 import Button from "../../components/Button";
@@ -21,31 +21,31 @@ export default class SignIn extends Component {
   render() {
     return (
       <KeyboardAvoidingView style={styles.container}>
-        <Header title={"SIGN IN"} />
+        <Header title={Strings.Header.signIn} />
         <View style={styles.inputs}>
-          <Input label={"email"} />
-          <Input label={"password"} isPassword={true} />
+          <Input label={Strings.Layout.signIn.labelEmail} />
+          <Input label={Strings.Layout.signIn.labelPassword} isPassword={true} />
         </View>
-        <Button text={"Sign In"} />
+        <Button text={Strings.Button.signInButton} />
         <View style={styles.separatorContainer}>
           <View style={styles.smallSeparator} />
-          <Text style={styles.separatorText}>Or Sign IN WIth</Text>
+          <Text style={styles.separatorText}>{Strings.Button.socialSignIn}</Text>
           <View style={styles.smallSeparator} />
         </View>
         <View style={styles.socialContainer}>
           <FontAwesome5
             name="facebook"
-            size={50}
+            size={35}
             color={Colors.inputBorderColor}
           />
           <FontAwesome5
             name="twitter"
-            size={50}
+            size={35}
             color={Colors.inputBorderColor}
           />
           <FontAwesome5
             name="google"
-            size={50}
+            size={35}
             color={Colors.inputBorderColor}
           />
         </View>
@@ -63,14 +63,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 40,
   },
   inputs: {
-    marginTop: 100,
-    marginBottom: 60,
+    marginTop: 50,
+    marginBottom: 20,
   },
   separatorContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginTop: 70,
+    marginTop: 40,
   },
   smallSeparator: {
     height: 1,
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-evenly",
     marginTop: 30,
-    marginBottom: 119,
+    marginBottom: 60,
   },
   bottomText: {
     color: "#97ADB6",
