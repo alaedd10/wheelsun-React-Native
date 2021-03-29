@@ -15,11 +15,11 @@ const index = ({text}: ButtonTypes) => {
 const styles = StyleSheet.create({
     container : {
         backgroundColor: Colors.buttonBgColor,
-        elevation: 8,
-        borderRadius: 10,
+        // elevation: 8,
+        borderRadius: 15,
         paddingVertical: 10,
         paddingHorizontal: 12,
-        width: '80%',
+        width: '100%',
         height: 50,
         alignItems: 'center',
         justifyContent: 'center',
