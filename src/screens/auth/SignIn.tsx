@@ -21,37 +21,53 @@ export default class SignIn extends Component {
   render() {
     return (
       <KeyboardAvoidingView style={styles.container}>
-        <Header title={Strings.Header.signIn} />
-        <View style={styles.inputs}>
-          <Input label={Strings.Layout.signIn.labelEmail} />
-          <Input label={Strings.Layout.signIn.labelPassword} isPassword={true} />
+        <View style={styles.top}>
+          <Header title={Strings.Headers.signIn} />
+          <View style={styles.inputs}>
+            <Input
+              label={Strings.Layouts.signIn.labelEmail}
+              keyboardType="email-address"
+            />
+            <Input
+              label={Strings.Layouts.signIn.labelPassword}
+              isPassword={true}
+            />
+          </View>
+          <Button text={Strings.Buttons.signInButton} />
         </View>
-        <Button text={Strings.Button.signInButton} />
-        <View style={styles.separatorContainer}>
-          <View style={styles.smallSeparator} />
-          <Text style={styles.separatorText}>{Strings.Button.socialSignIn}</Text>
-          <View style={styles.smallSeparator} />
+
+        <View style={styles.bottom}>
+          <View>
+            <View style={styles.separatorContainer}>
+              <View style={styles.smallSeparator} />
+              <Text style={styles.separatorText}>
+                {Strings.Buttons.socialSignIn}
+              </Text>
+              <View style={styles.smallSeparator} />
+            </View>
+            <View style={styles.socialContainer}>
+              <FontAwesome5
+                name="facebook"
+                size={35}
+                color={Colors.inputBorderColor}
+              />
+              <FontAwesome5
+                name="twitter"
+                size={35}
+                color={Colors.inputBorderColor}
+              />
+              <FontAwesome5
+                name="google"
+                size={35}
+                color={Colors.inputBorderColor}
+              />
+            </View>
+          </View>
+
+          <Text style={styles.bottomText}>
+            Don’t have an account? <Text style={styles.link}>Sign up</Text>
+          </Text>
         </View>
-        <View style={styles.socialContainer}>
-          <FontAwesome5
-            name="facebook"
-            size={35}
-            color={Colors.inputBorderColor}
-          />
-          <FontAwesome5
-            name="twitter"
-            size={35}
-            color={Colors.inputBorderColor}
-          />
-          <FontAwesome5
-            name="google"
-            size={35}
-            color={Colors.inputBorderColor}
-          />
-        </View>
-        <Text style={styles.bottomText}>
-          Don’t have an account? <Text style={styles.link}>Sign up</Text>
-        </Text>
       </KeyboardAvoidingView>
     );
   }
@@ -61,6 +77,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 40,
+  },
+  top: {
+    flex: 1.5,
+    justifyContent: "space-between",
+  },
+  bottom: {
+    flex: 1,
+    justifyContent: "space-between",
   },
   inputs: {
     marginTop: 50,
@@ -96,5 +120,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginBottom: 65,
   },
-  link: { color: Colors.buttonBgColor, textDecorationLine: "underline" },
+  link: {
+    color: Colors.buttonBgColor,
+    textDecorationLine: "underline",
+  },
 });

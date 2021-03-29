@@ -7,7 +7,7 @@ import { AuthNavigator } from "./src/navigations/auth";
 import SignIn from "./src/screens/auth/SignIn";
 import SignUp from "./src/screens/auth/SignUp";
 export default function App() {
-  return <SignIn />;
+  return <SignUp />;
 }
 
 const styles = StyleSheet.create({

@@ -5,8 +5,14 @@ type inputProps = {
   label: string;
   placeholder?: string;
   isPassword?: boolean;
+  [otherProps: string]: any;
 };
-const input = ({ label, placeholder = "", isPassword = false }: inputProps) => {
+const input = ({
+  label,
+  placeholder = "",
+  isPassword = false,
+  ...otherProps
+}: inputProps) => {
   return (
     <View style={styles.container}>
       <Text style={styles.label}>{label}</Text>
@@ -14,6 +20,7 @@ const input = ({ label, placeholder = "", isPassword = false }: inputProps) => {
         style={styles.input}
         placeholder={placeholder}
         secureTextEntry={isPassword}
+        {...otherProps}
       />
     </View>
   );
