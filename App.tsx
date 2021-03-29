@@ -4,12 +4,11 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { NavigationContainer } from "@react-navigation/native";
 import {AuthNavigator} from './src/navigations/auth'
-
+import SignIn from './src/screens/auth/SignIn'
+import SignUp from './src/screens/auth/SignUp'
 export default function App() {
   return (
-      <NavigationContainer>
-        <AuthNavigator />
-      </NavigationContainer>
+      <SignIn />
   );
 }
 
